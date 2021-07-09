@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
 
 :root {
-  --color-moderate-violet: hsl(263, 55%, 52%);
-  --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
-  --color-very-dark-blackish-blue: hsl(219, 29%, 14%);
-  --color-white: hsl(0, 0%, 100%);
-  --color-light-gray: hsl(0, 0%, 81%);
-  --color-light-grayish-blue: hsl(210, 46%, 95%);
+  --color-moderate-violet: #7541c8;
+  --color-very-dark-grayish-blue: #48556a;
+  --color-very-dark-blackish-blue: #19212e;
+  --color-white: #ffffff;
+  --color-light-gray: #cfcfcf;
+  --color-light-grayish-blue: #ecf2f8;
 }
 
 * {
@@ -14,7 +14,6 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 100%;
-  letter-spacing: 1px;
 }
 
 input,
@@ -31,6 +30,7 @@ body {
   height: 100%;
   min-height: 100vh;
   font-weight: 500;
+  background-color: var(--color-light-grayish-blue);
 }
 
 img {
@@ -39,12 +39,105 @@ img {
 }
 
 .container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 30px;
 }
 
-.comment {
+.content {
+  width: 100%;
+  max-width: 1240px;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 30px;
+  grid-template-areas:
+    "cmt1 cmt1 cmt2 cmt3"
+    "cmt4 cmt5 cmt5 cmt3";
+}
+
+.comment-card {
+  padding: 30px 50px 30px 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 2px 2px 15px 2px #dddddd;
+  position: relative;
+}
+
+.quotation {
+  position: absolute;
+  top: 0;
+  right: 120px;
+  height: 108px;
+  z-index: 1;
+}
+
+.comment-card > h2 {
+  font-size: 1.4em;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.comment-card > p {
+  opacity: 70%;
+  font-size: 0.95em;
+  letter-spacing: 0.7px;
+  line-height: 18px;
+}
+
+.cmt-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cmt-header img {
+  border-radius: 50%;
+  height: 30px;
+}
+
+.cmt-header h4 {
+  font-size: 1.1em;
+  opacity: 70%;
+}
+
+.cmt-header p {
+  font-size: 0.9em;
+  opacity: 50%;
+}
+
+.cmt1 {
+  background-color: var(--color-moderate-violet);
+  grid-area: cmt1;
+  color: var(--color-white);
+}
+
+.cmt2 {
+  background-color: var(--color-very-dark-grayish-blue);
+  grid-area: cmt2;
+  color: var(--color-white);
+}
+
+.cmt3 {
+  background-color: var(--color-white);
+  grid-area: cmt3;
+  color: var(--color-very-dark-grayish-blue);
+}
+
+.cmt4 {
+  background-color: var(--color-white);
+  grid-area: cmt4;
+  color: var(--color-very-dark-grayish-blue);
+}
+
+.cmt5 {
+  background-color: var(--color-very-dark-blackish-blue);
+  grid-area: cmt5;
+  color: var(--color-white);
 }

@@ -13,12 +13,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: none;
-  border: none;
   font-size: 100%;
   letter-spacing: 1px;
 }
 
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+html,
 body {
   font-size: 13px;
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -37,4 +42,9 @@ img {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+
+  display: grid;
+}
+
+.comment {
 }

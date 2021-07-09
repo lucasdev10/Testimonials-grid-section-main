@@ -1,3 +1,12 @@
 {
-  "liveServer.settings.port": 5501
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "200",
+  "editor.formatOnSave": true,
+  "editor.fontSize": 13,
+  "editor.tabSize": 3,
+  "editor.wordWrap": "on",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
 }
